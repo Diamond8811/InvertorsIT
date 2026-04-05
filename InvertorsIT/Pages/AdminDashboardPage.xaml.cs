@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace InvertorsIT.Pages
+{
+    /// <summary>
+    /// Логика взаимодействия для AdminDashboardPage.xaml
+    /// </summary>
+    public partial class AdminDashboardPage : Page
+    {
+        private MainWindow mainWindow;
+
+        public AdminDashboardPage(MainWindow window)
+        {
+            InitializeComponent();
+            mainWindow = window;
+            ContentFrame.Navigate(new UsersPage());
+        }
+
+        private void btnUsers_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(new UsersPage());
+        }
+
+        private void btnEquipment_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(new EquipmentPage());
+        }
+
+        private void btnRequests_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(new RepairRequestsPage());
+        }
+
+    }
+}
